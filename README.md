@@ -23,7 +23,7 @@ class Sms {
     public function send_code($mobile) {
         $code = mt_rand(1000, 9999);
         $AliSMS = new SmsGateWay();
-        $AliSMS->send($mobile, ['code'=>$code], 'SMS_10210103');
+        $AliSMS->send($mobile, ['code'=>"$code"], 'SMS_10210103');
     }
 
 }
